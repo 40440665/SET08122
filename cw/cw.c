@@ -592,16 +592,34 @@ void rules()
 void generateSudoku(int diff)
 {
 	generateRandomNums();
-	
-	if (diff)
-	
-	
+	int removeSquares;
+	int i;
+
+	if (diff == 1)
+	{
+		removeSquares = 50;
+	}
+	else if (diff == 2)
+	{
+		removeSquares = 62;
+	}
+	else if (diff == 3)
+	{
+		removeSquares = 71;
+	}
 	
 	if(solveSudoku(sudokuGrid, 0, 0))
 	{
-		for(int i = 0; i < )
-		printf("%d", randBuffer);
-		printf("%d", randBuffer2);
+		for(i = 0; i < removeSquares; ++i)
+		{
+			sudokuGrid[rands[i][i+1] = 0;
+			printf("%d", i);
+		}
+	}
+	else
+	{
+		printf("Error with starting Sudoku grid");
+		exit(0);
 	}
 }
 
@@ -610,8 +628,7 @@ void generateRandomNums()
     srand(time(NULL));
 	
 	for (int i = 0; i < 40; i++) {
-        rands[i] = (rand() % (8 - 0) + 0);
-		printf("%d", rands[i]);
+        rands[i] = (rand() % (9 - 0) + 0);
     }
 }
 
